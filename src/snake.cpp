@@ -44,11 +44,22 @@ void Snake::UpdateHead() {
   }
 
   // Wrap the Snake around to the beginning if going off of the screen.
-  //if the x coordinate is greater than the grid_width
-  head_x = fmod(head_x + grid_width, grid_width);  //head_x is added in case its negative
-  head_y = fmod(head_y + grid_height, grid_height);
-}
+  //if head_x is bigger than the grid_width, its value is modified to make the snake
+  //appear to wrap around.
+  head_x = fmod(head_x + grid_width, grid_width);  //head_x is added in the () in case 
+  head_y = fmod(head_y + grid_height, grid_height); //its negative.  If only the grid_width
+}//or grid_height was modulo'd the number may come out negative.  Adding head_x first ensures
+//the value will not be negative.
 
+
+//pass in the current_head_cell and the prev_head_cell.
+//The body always follows the path through the cell of where the head was.  This makes the 
+//previous cell of the head a part of the body.  The body is following the head, so you need to
+//turn the previous location of the head into a body cell.  
+
+//Then you need to remove the tail segment (1 piece of size) in order to maintain the length.
+//The body is constantly getting added to in the front and deleted in the back to create the
+//appearance that it's moving.
 void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) {
   // Add previous head location to vector
   body.push_back(prev_head_cell);
@@ -58,20 +69,26 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) 
     body.erase(body.begin());
   } else {
     growing = false;
-    size++;
+    size++;  //increment size of tail by 1.  This would have 
   }
 
   // Check if the snake has died.
   for (auto const &item : body) {
     if (current_head_cell.x == item.x && current_head_cell.y == item.y) {
-      alive = false;
-    }
+      alive = false;  //check to see if the head coordinates are equal to any of the body
+    }  //coordinates.  This means the snake ran into itself; which kills it.
   }
 }
 
-void Snake::GrowBody() { growing = true; }
+void Snake::GrowBody() { growing = true; }  //if the snake body is growing, set growing to true
 
-// Inefficient method to check if cell is occupied by snake.
+
+
+
+// Inefficient method to check if cell is occupied by snake.  
+
+//This method is used to check if the snake is in a coordinate before placing food.
+//You don't want to place food directly on top of the snake.
 bool Snake::SnakeCell(int x, int y) {
   if (x == static_cast<int>(head_x) && y == static_cast<int>(head_y)) {
     return true;
