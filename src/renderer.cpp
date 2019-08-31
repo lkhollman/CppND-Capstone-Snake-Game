@@ -33,6 +33,14 @@ Renderer::Renderer(const std::size_t screen_width,
   if (nullptr == sdl_renderer) {
     std::cerr << "Renderer could not be created.\n";
     std::cerr << "SDL_Error: " << SDL_GetError() << "\n";
+
+    //use software renderer as fallback
+    std::cerr << "Using Software Renderer.\n";
+    sdl_renderer = SDL_CreateRenderer(sdl_window, -1, SDL_RENDERER_SOFTWARE);
+    if (nullptr == sdl_renderer){
+      std::cerr << "Software Renderer could not be created.\n";
+      std::cerr << "SDL_Error: " << SDL_GetError() << "\n";
+    }
   }
 }
 
