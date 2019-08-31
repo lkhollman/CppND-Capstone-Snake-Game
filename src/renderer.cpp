@@ -9,13 +9,16 @@ Renderer::Renderer(const std::size_t screen_width,
       screen_height(screen_height),
       grid_width(grid_width),
       grid_height(grid_height) {
-  // Initialize SDL
+
+
+   // Initialize SDL.  Here you could also initialize audio and other features with an OR (|)
+  //in the if statement.  check SDL_Init documentation.
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     std::cerr << "SDL could not initialize.\n";
     std::cerr << "SDL_Error: " << SDL_GetError() << "\n";
   }
 
-  // Create Window
+  // Create Window. SDL_CreateWindow returns a pointer that is stored in sdl_window
   sdl_window = SDL_CreateWindow("Snake Game", SDL_WINDOWPOS_CENTERED,
                                 SDL_WINDOWPOS_CENTERED, screen_width,
                                 screen_height, SDL_WINDOW_SHOWN);
@@ -33,6 +36,7 @@ Renderer::Renderer(const std::size_t screen_width,
   }
 }
 
+//Destructor
 Renderer::~Renderer() {
   SDL_DestroyWindow(sdl_window);
   SDL_Quit();
@@ -43,9 +47,9 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
 
-  // Clear screen
-  SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
-  SDL_RenderClear(sdl_renderer);
+  // Clear screen                    //R     G     B    opacity   //pass in sdl_renderer and
+  SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);  //set to black essentially
+  SDL_RenderClear(sdl_renderer); //draw this over the entire window      
 
   // Render food
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
@@ -65,9 +69,9 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
   block.x = static_cast<int>(snake.head_x) * block.w;
   block.y = static_cast<int>(snake.head_y) * block.h;
   if (snake.alive) {
-    SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
+    SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);  //snake color alive
   } else {
-    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
+    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);  //snake color dead
   }
   SDL_RenderFillRect(sdl_renderer, &block);
 
