@@ -1,3 +1,5 @@
+# List everything sensically under each heading.  Alphabetical or something
+
 # CPPND: Capstone Snake Game Example
 
 This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
@@ -26,24 +28,47 @@ In this project, you can build your own C++ application or extend this Snake gam
 ## Basic Build Instructions
 
 1. Clone this repo.
-2. Make a build directory in the top level directory: `mkdir build && cd build`
+1. DELETE build directory from project
+2. Make a new build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
+    3a. If you get the following error:
+        "Target "SnakeGame" links to item "-L/usr/lib/x86_64-linux-gnu -lSDL2 which has leading or trailing whitespace.  This is now an error according to policy CMP0004."
+
+        Type the following at the prompt:
+        > sudo vim '/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake'
+
+        or navigate to your sdl2-config.cmake file and edit with the following:
+        find "-ISDL2 " at the end of the file and delete the trailing space.
 4. Run it: `./SnakeGame`.
 
 ## Requirements.  Specifications and Line numbers of each requirement implemented.
 
 ##      Loops, Functions, I/O
-1. This project demonstrates an understanding of C++ functions and control structures
-    Line #
+1. This project demonstrates an understanding of C++ functions and control structures.
+    controller.cpp |  Lines: 6-10, 13-42
+    game.cpp       |  Lines: 13-55, 58-71, 73-90 
+    main.cpp       |  Lines: 6-22
+    renderer.cpp   |  Lines: 53-88, 90-93
+    snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102 
 
 2. This project reads data from a file and processes the data, or the program writes data to a      file.  (call an outside image for a background)
+    ---------- NOT AT THIS TIME ---------- if i add this it's going to change all my line numbers
 
 3. This project accepts user input and processes the input.
-    Line #
+    controller.cpp |  Lines: 6-10, 13-42
+    game.cpp       |  Lines: 28 (calling controller.cpp) 
 
 ##      Object Oriented Programming
 4. This project uses Object Oriented Programming techniques.
-    Line #
+    controller.h   |  Lines: 6-13 (class definition)
+    controller.cpp |  Lines: 6-10, 13-42 (class methods)
+    game.h         |  Lines:
+    game.cpp       |  Lines:
+    main.cpp       |  Lines:
+    rederer.cpp    |  Lines:
+    renderer.h     |  Lines:
+    snake.cpp      |  Lines:
+    snake.h        |  Lines:    
 
 5. Classes use appropriate access specifiers for class members.
 
