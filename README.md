@@ -1,3 +1,6 @@
+# Are there Constructors without a matching destructor?  of base classes.  
+   class that uses unmanaged dynamically allocated memory, along with any class that otherwise needs to modify state upon the termination of an object, uses a destructor.  (from RUBRIC)
+
 # List everything sensically under each heading.  Alphabetical or something
 
 # CPPND: Capstone Snake Game Example
@@ -62,18 +65,30 @@ In this project, you can build your own C++ application or extend this Snake gam
 4. This project uses Object Oriented Programming techniques.
     controller.h   |  Lines: 6-13 (class definition)
     controller.cpp |  Lines: 6-10, 13-42 (class methods)
-    game.h         |  Lines:
-    game.cpp       |  Lines:
-    main.cpp       |  Lines:
-    rederer.cpp    |  Lines:
-    renderer.h     |  Lines:
-    snake.cpp      |  Lines:
-    snake.h        |  Lines:    
+    game.h         |  Lines: 10-33 (class definition)
+    game.cpp       |  Lines: 5-11, 13-55, 58-71, 73-90, 93, 94 
+                      		(class methods)
+    main.cpp       |  Lines: 14, 15, 16, 17, 19, 20  
+                      		(object calls) 
+    rederer.cpp    |  Lines: 5-11, 53-88, 90-93
+                      		(class methods)
+    renderer.h     |  Lines: 8-27 (class definition)
+    snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102          
+                      		(class methods)
+    snake.h        |  Lines: 7-41 (class definition)   
 
 5. Classes use appropriate access specifiers for class members.
 
 6. Class constructors utilize member initialization lists.
-    snake.h - Line # 11 (List underneath after the colon ?)
+    controller.h   |  Lines:
+    controller.cpp |  Lines:
+    game.h         |  Lines:
+    game.cpp       |  Lines:
+    main.cpp       |  Lines:
+    renderer.cpp   |  Lines:
+    renderer.h     |  Lines:
+    snake.cpp      |  Lines:
+    snake.h        |  Lines: 10-11
 
 7. Classes abstract implementation details from their interfaces.
 
