@@ -54,6 +54,9 @@ In this project, you can build your own C++ application or extend this Snake gam
 
     
 2. This project accepts user input and processes the input.
+
+    File | Lines:
+    ---- | ------------
     * controller.cpp |  Lines: 6-10, 13-42
     * game.cpp       |  Lines: 28 (calling controller.cpp) 
 
