@@ -48,10 +48,7 @@ Checks to see if snake is growing in size.
 Checks current location of snake to help in placement of next food item, because food can't be placed on top of the snake.
 
 ## Expected Behavior and Output
-Pressing the up arrow on the keyboard causes the snake to go up on the screen.
-Pressing the down arrow on the keyboard causes the snake to go down on the screen.
-Pressing the left arrow on the keyboard causes the snake to go left on the screen.
-Pressing the right arrow on the keyboard causes the snake to go right on the screen.
+Pressing the directional keys on the keyboard control the snake on the screen by causing the snake to move in the corresponding direction.
 
 When the snake is guided to a food item it disappears (is eaten) and another is randomly placed on the screen.
 
@@ -77,7 +74,7 @@ The game ends when the snake runs into its own body (tries to eat itself).
 ## Basic Build Instructions
 
 1. Clone this repo.
-1. Delete build directory from project
+1. Delete the included build directory
 2. Make a new build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
     3a. If you get the following error:
