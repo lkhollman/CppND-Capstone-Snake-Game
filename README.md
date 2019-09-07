@@ -3,7 +3,7 @@ This is a clone of the traditional Snake Game.
 
 Once installed and loaded, simply use the arrow keys to operate the direction of the snake on the screen.  The object of the game is to guide the snake to the yellow squares (food) on the screen, so the snake will eat them.  
 
-# File and Class Structure 
+## File and Class Structure 
 The SDL2 Library is utilized for overall functionality.
 
 ### main.cpp 
@@ -45,7 +45,7 @@ Checks to see if snake is growing in size.
 
 Checks current location of snake to help in placement of next food item.  Food can't be placed on top of the snake.
 
-# Expected Behavior and Output
+## Expected Behavior and Output
 Each food item eaten increases score and the moving speed of the snake.  
 
 The game ends when the snake runs into its own body.
