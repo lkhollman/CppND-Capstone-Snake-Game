@@ -49,7 +49,7 @@ In this project, you can build your own C++ application or extend this Snake gam
     * main.cpp       |  Lines: 6-22
     * renderer.cpp   |  Lines: 53-88, 90-93
     * snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102 
-    ------------------------------------------------------------
+
     
 2. This project accepts user input and processes the input.
     * controller.cpp |  Lines: 6-10, 13-42
