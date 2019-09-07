@@ -87,7 +87,7 @@ The game ends when the snake runs into its own body (tries to eat itself).
         find "-ISDL2 " at the end of the file and delete the trailing space.
 4. Run it: `./SnakeGame`.
 
-## Requirements.  Specifications and Line numbers of each requirement implemented.
+## Requirement specifications and line numbers of each implemented.
 
 ##      Loops, Functions, I/O
 1. This project demonstrates an understanding of C++ functions and control structures.
