@@ -93,4 +93,4 @@ In this project, you can build your own C++ application or extend this Snake gam
     snake.h        |  12-15
 
 6. Classes encapsulate behavior.
-    * Uses classes controller.h, game.h, renderer.h, and snake.h in order to encapsulate behavior.
+    * Uses the following classes to encapsulate behavior: controller.h, game.h, renderer.h, and snake.h
