@@ -47,10 +47,10 @@ In this project, you can build your own C++ application or extend this Snake gam
     File | Lines:
     ---- | ------------
     controller.cpp | 6-10, 13-42
-    game.cpp | 13-55, 58-71, 73-90 
-    main.cpp | 6-22
-    renderer.cpp | 53-88, 90-93
-    snake.cpp | 5-22, 27-51, 63-81, 83, 92-102 
+    game.cpp       | 13-55, 58-71, 73-90 
+    main.cpp       | 6-22
+    renderer.cpp   | 53-88, 90-93
+    snake.cpp      | 5-22, 27-51, 63-81, 83, 92-102 
 
     
 2. This project accepts user input and processes the input.
@@ -62,30 +62,39 @@ In this project, you can build your own C++ application or extend this Snake gam
 
 ##      Object Oriented Programming
 3. This project uses Object Oriented Programming techniques.
-    * controller.h   |  Lines: 6-13 (class definition)
-    * controller.cpp |  Lines: 6-10, 13-42 (class methods)
-    * game.h         |  Lines: 10-33 (class definition)
-    * game.cpp       |  Lines: 5-11, 13-55, 58-71, 73-90, 93, 94 
+
+    File | Lines:
+    ---- | ------------
+    controller.h   |  Lines: 6-13 (class definition)
+    controller.cpp |  Lines: 6-10, 13-42 (class methods)
+    game.h         |  Lines: 10-33 (class definition)
+    game.cpp       |  Lines: 5-11, 13-55, 58-71, 73-90, 93, 94 
                       		(class methods)
-    * main.cpp       |  Lines: 14, 15, 16, 17, 19, 20
+    main.cpp       |  Lines: 14, 15, 16, 17, 19, 20
                       		(object calls) 
-    * rederer.cpp    |  Lines: 5-11, 53-88, 90-93
+    rederer.cpp    |  Lines: 5-11, 53-88, 90-93
                       		(class methods)
-    * renderer.h     |  Lines: 8-27 (class definition)
-    * snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102
+    renderer.h     |  Lines: 8-27 (class definition)
+    snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102
                       		(class methods)
-    * snake.h        |  Lines: 7-41 (class definition)
+    snake.h        |  Lines: 7-41 (class definition)
 
 4. Classes use appropriate access specifiers for class members.
-    * controller.h   |  Lines: (Public) 8, (Private) 11
-    * game.h         |  Lines: (Public) 12-16, (Private) 19-32
-    * renderer.h     |  Lines: (Public) 10-15, (Private) 19-26
-    * snake.h        |  Lines: (Public) 9-30, (Private) 34-40
+
+    File | Lines:
+    ---- | ------------
+    controller.h   |  Lines: (Public) 8, (Private) 11
+    game.h         |  Lines: (Public) 12-16, (Private) 19-32
+    renderer.h     |  Lines: (Public) 10-15, (Private) 19-26
+    snake.h        |  Lines: (Public) 9-30, (Private) 34-40
 
 5. Class constructors utilize member initialization lists.
-    * game.cpp       |  Lines: 6-9
-    * renderer.cpp   |  Lines: 8-11
-    * snake.h        |  Lines: 12-15
+
+    File | Lines:
+    ---- | ------------
+    game.cpp       |  Lines: 6-9
+    renderer.cpp   |  Lines: 8-11
+    snake.h        |  Lines: 12-15
 
 6. Classes encapsulate behavior.
     * Uses classes controller.h, game.h, renderer.h, and snake.h in order to encapsulate behavior.
