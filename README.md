@@ -9,19 +9,19 @@ Once installed and loaded, simply use the arrow keys to operate the direction of
 The SDL2 Library is utilized for overall functionality.
 
 ### main.cpp 
-Initiates program and settings for game play:  sets game play frames per second, screen size in pixels, and the establishes the grid size for the snake to navigate through.
+Initiates program and settings for game play:  Sets game play frames per second (FPS), screen size in pixels, and establishes the grid size for the snake to navigate through.
 
 Creates the following objects: renderer, controller, and game
 
 Calls game.Run to start the game.
 
-Prints final messages to the console when game is over.
+Prints final messages to the console when the game is over.
 
 ### controller.cpp 
 Detects which arrow key is pressed.
 
 ### game.cpp
-Contains the game loop.  Takes the input from controller, produces a random x,y coordinate for food placement, and renders it to the screen through the renderer class.
+Contains the game loop.  Takes input from the controller class, produces a random x,y coordinate for food placement, and renders it to the screen through the renderer class.
 
 Maintains frame rate by measuring how much time operations take to complete; ensuring consistent game play.
 
@@ -45,12 +45,19 @@ Decides if snake has died.
 
 Checks to see if snake is growing in size.
 
-Checks current location of snake to help in placement of next food item.  Food can't be placed on top of the snake.
+Checks current location of snake to help in placement of next food item, because food can't be placed on top of the snake.
 
 ## Expected Behavior and Output
-Each food item eaten increases score and the moving speed of the snake.  
+Pressing the up arrow on the keyboard causes the snake to go up on the screen.
+Pressing the down arrow on the keyboard causes the snake to go down on the screen.
+Pressing the left arrow on the keyboard causes the snake to go left on the screen.
+Pressing the right arrow on the keyboard causes the snake to go right on the screen.
 
-The game ends when the snake runs into its own body.
+When the snake is guided to a food item it disappears (is eaten) and another is randomly placed on the screen.
+
+Each food item eaten increases score and moving speed of the snake.  
+
+The game ends when the snake runs into its own body (tries to eat itself).
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
