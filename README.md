@@ -68,15 +68,11 @@ In this project, you can build your own C++ application or extend this Snake gam
     controller.h   |  Lines: 6-13 (class definition)
     controller.cpp |  Lines: 6-10, 13-42 (class methods)
     game.h         |  Lines: 10-33 (class definition)
-    game.cpp       |  Lines: 5-11, 13-55, 58-71, 73-90, 93, 94 
-                      		(class methods)
-    main.cpp       |  Lines: 14, 15, 16, 17, 19, 20
-                      		(object calls) 
-    rederer.cpp    |  Lines: 5-11, 53-88, 90-93
-                      		(class methods)
+    game.cpp       |  Lines: 5-11, 13-55, 58-71, 73-90, 93, 94 (class methods)
+    main.cpp       |  Lines: 14, 15, 16, 17, 19, 20 (object calls) 
+    rederer.cpp    |  Lines: 5-11, 53-88, 90-93 (class methods)
     renderer.h     |  Lines: 8-27 (class definition)
-    snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102
-                      		(class methods)
+    snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102 (class methods)
     snake.h        |  Lines: 7-41 (class definition)
 
 4. Classes use appropriate access specifiers for class members.
