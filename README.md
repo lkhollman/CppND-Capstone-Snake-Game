@@ -43,12 +43,14 @@ In this project, you can build your own C++ application or extend this Snake gam
 
 ##      Loops, Functions, I/O
 1. This project demonstrates an understanding of C++ functions and control structures.
+    ------------------------------------------------------------
     * controller.cpp |  Lines: 6-10, 13-42
     * game.cpp       |  Lines: 13-55, 58-71, 73-90 
     * main.cpp       |  Lines: 6-22
     * renderer.cpp   |  Lines: 53-88, 90-93
     * snake.cpp      |  Lines: 5-22, 27-51, 63-81, 83, 92-102 
-
+    ------------------------------------------------------------
+    
 2. This project accepts user input and processes the input.
     * controller.cpp |  Lines: 6-10, 13-42
     * game.cpp       |  Lines: 28 (calling controller.cpp) 
