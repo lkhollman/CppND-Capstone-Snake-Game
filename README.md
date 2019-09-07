@@ -1,7 +1,7 @@
 # CPPND: Capstone Snake Game
 This is a clone of the traditional Snake Game.  
 
-Once installed and loaded, simply use the arrow keys to operate the direction of the snake on the screen.  The object of the game is to guide the snake to the yellow squares (food) on the screen, so the snake will eat them.  
+Once installed and loaded, simply use the arrow keys to change the direction of the snake on the screen.  The object of the game is to guide the snake to the yellow squares (food) on the screen, so the snake will "eat" them.  Once "eaten" they will disapper from the screen.  
 
 <img src="snake_game.gif"/>
 
@@ -11,7 +11,7 @@ The SDL2 Library is utilized for overall functionality.
 ### main.cpp 
 Initiates program and settings for game play:  Sets game play frames per second (FPS), screen size in pixels, and establishes the grid size for the snake to navigate through.
 
-Creates the following objects: renderer, controller, and game
+Creates the following objects: renderer, controller, and game.
 
 Calls game.Run to start the game.
 
@@ -25,7 +25,7 @@ Contains the game loop.  Takes input from the controller class, produces a rando
 
 Maintains frame rate by measuring how much time operations take to complete; ensuring consistent game play.
 
-Speed of snake is increased each time a food item is eaten.
+Speed of snake and score are increased each time a food item is eaten.
 
 Checks if snake is alive before continuing.
 
