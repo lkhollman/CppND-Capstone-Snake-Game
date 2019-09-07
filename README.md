@@ -57,8 +57,8 @@ In this project, you can build your own C++ application or extend this Snake gam
 
     File | Lines:
     ---- | ------------
-    * controller.cpp |  Lines: 6-10, 13-42
-    * game.cpp       |  Lines: 28 (calling controller.cpp) 
+    controller.cpp |  Lines: 6-10, 13-42
+    game.cpp       |  Lines: 28 (calling controller.cpp) 
 
 ##      Object Oriented Programming
 3. This project uses Object Oriented Programming techniques.
