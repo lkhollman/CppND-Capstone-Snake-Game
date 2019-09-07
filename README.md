@@ -3,6 +3,8 @@ This is a clone of the traditional Snake Game.
 
 Once installed and loaded, simply use the arrow keys to operate the direction of the snake on the screen.  The object of the game is to guide the snake to the yellow squares (food) on the screen, so the snake will eat them.  
 
+<img src="snake_game.gif"/>
+
 ## File and Class Structure 
 The SDL2 Library is utilized for overall functionality.
 
@@ -49,8 +51,6 @@ Checks current location of snake to help in placement of next food item.  Food c
 Each food item eaten increases score and the moving speed of the snake.  
 
 The game ends when the snake runs into its own body.
-
-<img src="snake_game.gif"/>
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
