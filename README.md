@@ -1,12 +1,56 @@
-# CPPND: Capstone Snake Game Example
+# CPPND: Capstone Snake Game
+This is a clone of the traditional Snake Game.  
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+Once installed and loaded, simply use the arrow keys to operate the direction of the snake on the screen.  The object of the game is to guide the snake to the yellow squares (food) on the screen, so the snake will eat them.  
+
+# File and Class Structure 
+The SDL2 Library is utilized for overall functionality.
+
+### main.cpp 
+Initiates program and settings for game play:  sets game play frames per second, screen size in pixels, and the establishes the grid size for the snake to navigate through.
+
+Creates the following objects: renderer, controller, and game
+
+Calls game.Run to start the game.
+
+Prints final messages to the console when game is over.
+
+### controller.cpp 
+Detects which arrow key is pressed.
+
+### game.cpp
+Contains the game loop.  Takes the input from controller, produces a random x,y coordinate for food placement, and renders it to the screen through the renderer class.
+
+Maintains frame rate by measuring how much time operations take to complete; ensuring consistent game play.
+
+Speed of snake is increased each time a food item is eaten.
+
+Checks if snake is alive before continuing.
+
+Returns score and Frames Per Second (FPS), so SDL can place in title bar of game window.
+
+### renderer.cpp
+Utilizes the SDL library to create a window and constantly update the window with the location of the snake, the food item, and the title bar information; Score and Frames Per Second (FPS).
+
+### snake.cpp
+Updates the current position of the head of the snake.
+
+Checks to make sure the snake is moving.
+
+Handles operations for making the snake wrap around the edge of window to the other side for continuous movement.
+
+Decides if snake has died.
+
+Checks to see if snake is growing in size.
+
+Checks current location of snake to help in placement of next food item.  Food can't be placed on top of the snake.
+
+# Expected Behavior and Output
+Each food item eaten increases score and the moving speed of the snake.  
+
+The game ends when the snake runs into its own body.
 
 <img src="snake_game.gif"/>
-
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -26,7 +70,7 @@ In this project, you can build your own C++ application or extend this Snake gam
 ## Basic Build Instructions
 
 1. Clone this repo.
-1. DELETE build directory from project
+1. Delete build directory from project
 2. Make a new build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
     3a. If you get the following error:
@@ -51,7 +95,6 @@ In this project, you can build your own C++ application or extend this Snake gam
     main.cpp       | 6-22
     renderer.cpp   | 53-88, 90-93
     snake.cpp      | 5-22, 27-51, 63-81, 83, 92-102 
-
     
 2. This project accepts user input and processes the input.
 
